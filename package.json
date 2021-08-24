@@ -1,0 +1,17 @@
+{
+  "name": "ejercicio1-nodejs",
+  "version": "1.0.0",
+  "description": "Ejercicio 1 - Node.JS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Dianis Caro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DianisCaro99/Ejercicio1-NodeJS/issues"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
