@@ -18,7 +18,7 @@ async function getProveedores() {
 };
 
 http
-.createServer(function (req, res) {
+.createServer(async function (req, res) {
     if (req.url === "/api/clientes") 
     {
         getClientes().then((datos)=> {
