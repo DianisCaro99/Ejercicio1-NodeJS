@@ -37,7 +37,7 @@ http
                     htmlbody += "<th class=\"col-2\">Compañia</th>\n ";
                     htmlbody += "</tr>\n</thead>\n<tbody>\n";
                     for (let elem of datos)
-                        htmlbody += "<tr><td>${elem.idCliente}</td><td>${elem.NombreCompania}</td><td>${elem.NombreContacto}</td></tr>\n";
+                        htmlbody += `<tr><td>${elem.idCliente}</td><td>${elem.NombreCompania}</td><td>${elem.NombreContacto}</td></tr>\n`;
                     htmlbody += "</tbody>\n</table>";
                     dataReq = data.replace("{{Data}}", htmlbody);
                     res.write(dataReq);
@@ -46,7 +46,7 @@ http
                 });
         });
     } 
-    else if(req.url === "/api/proveedoores"){
+    else if(req.url === "/api/proveedores"){
         getProveedores().then((datos)=> {
             fs.readFile("index.html", "UTF-8", (error, data) => {
                 if (error){
@@ -63,7 +63,7 @@ http
                     htmlbody += "<th class=\"col-2\">Compañia</th>\n ";
                     htmlbody += "</tr>\n</thead>\n<tbody>\n";
                     for (let elem of datos)
-                        htmlbody += "<tr><td>${elem.idproveedor}</td><td>${elem.nombrecompania}</td><td>${elem.nombrecontacto}</td></tr>\n";
+                        htmlbody += `<tr><td>${elem.idproveedor}</td><td>${elem.nombrecompania}</td><td>${elem.nombrecontacto}</td></tr>\n`;
                     htmlbody += "</tbody>\n</table>";
                     dataReq = data.replace("{{Data}}", htmlbody);
                     res.write(dataReq);
